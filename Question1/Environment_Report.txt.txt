@@ -1,0 +1,81 @@
+Linux Environment Verification Report
+
+========================================
+1. Username
+========================================
+
+Command:
+whoami
+
+Output:
+predator
+
+Observation:
+I executed the whoami command to identify the currently logged-in user. The command displayed my Linux username successfully.
+
+========================================
+2. Username and Groups
+========================================
+
+Command:
+id
+
+Output:
+uid=1000(predator) gid=1000(predator) groups=1000(predator),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+
+Observation:
+I used the id command to display my user ID (UID), group ID (GID), and all the groups associated with my account.
+
+========================================
+3. Current Shell
+========================================
+
+Command:
+echo $SHELL
+
+Output:
+/bin/bash
+
+Observation:
+I executed this command to identify the current shell. The output shows that my Linux session is using the Bash shell.
+
+========================================
+4. Current Working Directory
+========================================
+
+Command:
+pwd
+
+Output:
+/home/predator/Linux-Lab-Assignment/Question1
+
+Observation:
+I used the pwd command to display the current working directory. It confirmed that I was working inside the Question1 folder.
+
+========================================
+5. Files and Directories
+========================================
+
+Command:
+ls -la
+
+Output:
+total 8
+drwxr-xr-x 2 predator predator 4096 Jul  1 18:36 .
+drwxr-xr-x 7 predator predator 4096 Jul  1 18:36 ..
+
+Observation:
+I executed the ls -la command to list all files and directories, including hidden files. The command also displayed file permissions, ownership, and directory details.
+
+========================================
+6. Network Connectivity Verification
+========================================
+
+Command:
+ping -c 4 google.com
+
+Output:
+4 packets transmitted, 4 received, 0% packet loss
+
+Observation:
+I used the ping command to verify network connectivity. The successful replies confirmed that the system was connected to the internet.

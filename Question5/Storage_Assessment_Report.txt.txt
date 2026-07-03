@@ -1,0 +1,68 @@
+Storage Health Assessment Report
+
+========================================
+1. Available Storage Devices
+========================================
+
+Command:
+lsblk
+
+Output:
+sda    356.9M
+sdb    159.4M
+sdc    2G (SWAP)
+sdd    1T mounted on /
+
+Observation:
+The lsblk command displayed all available storage devices, their sizes, and mount points. The primary storage device (sdd) is mounted as the root filesystem.
+
+========================================
+2. Mounted File Systems
+========================================
+
+Command:
+mount | head
+
+Observation:
+The mount command displayed the currently mounted file systems. The root filesystem uses the ext4 file system and several WSL-related file systems are also mounted.
+
+========================================
+3. Disk Usage Statistics
+========================================
+
+Command:
+df -h
+
+Output:
+Root filesystem (/dev/sdd): 1007G total, 1.6G used, 955G available, 1% used.
+
+Observation:
+The df -h command displayed the storage usage in a human-readable format. The root filesystem has plenty of free space available.
+
+========================================
+4. Inode Utilization
+========================================
+
+Command:
+df -i
+
+Output:
+Root filesystem (/dev/sdd): 67108864 inodes, 45112 used, 67063752 free, 1% used.
+
+Observation:
+The df -i command displayed inode usage for the mounted file systems. Only a small percentage of inodes are in use, indicating sufficient capacity for creating new files.
+
+========================================
+5. Storage Health Observations
+========================================
+
+The storage devices were detected successfully and all required file systems were mounted correctly. Disk space and inode utilization were both very low, indicating a healthy storage environment.
+
+========================================
+6. Recommendations
+========================================
+
+1. Monitor disk usage regularly.
+2. Remove unnecessary files to free storage space.
+3. Perform regular backups of important data.
+4. Periodically check disk and filesystem health.
